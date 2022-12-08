@@ -50,5 +50,5 @@ st.line_chart(line_chart_data)
 
 # display code 
 if st.checkbox("Display code"): 
-    with open("./pages/02_Uber_Exploration_🚕!.py", 'r') as file:
+    with open("./pages/02_Uber_Exploration_🚕.py", 'r') as file:
         st.code(file.read(), language='python')
