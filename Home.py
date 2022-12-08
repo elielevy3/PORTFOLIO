@@ -7,7 +7,7 @@ st.sidebar.success("Select a project above.")
 st.markdown(
     """
     As a Data Engineer, please find in this portfolio some projects I have worked on.
-    ** 👉 Select a demo from the sidebar** to see some examples
+    **👉 Select a demo from the sidebar** to see some examples
     ### Wondering what's on the menu ? 
     - AirBnb Exploration 🏠 : Discover the available homes in the London Area
     - Uber Exploration 🚕 : Visualize Uber pickupds in NYC
