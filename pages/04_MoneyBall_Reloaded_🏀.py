@@ -7,7 +7,6 @@ Created on Sun Apr 25 18:20:27 2021
 @author: elie
 """
 
-import time
 import streamlit as st
 # To make things easier later, we're also importing numpy and pandas for working with sample data.
 import pandas as pd
@@ -75,6 +74,15 @@ st.title('MoneyBall Reloaded 🏀')
 #             picked_criterias_dict[col] = st.checkbox(col)
 #     i = i + number_of_item_per_line
 
+st.write(' ')
+with st.expander("🏀 Information about the Web App", expanded = True):
+    st.write("""
+            - Find the perfect player and compare players together
+            - Build with Python, Pandas, Numpy, Matplotlib, Scipy and Streamlit
+            - A doubt on what those criterias mean ? [Check this out](https://www.basketball-reference.com/about/glossary.html)
+            - Feel free to check the repo [here](https://github.com/elielevy3/MoneyBallReloaded)
+            """)
+
 
 picked_criterias_array = st.sidebar.multiselect("Pick the criterias", potential_criterias)
 
@@ -83,8 +91,7 @@ picked_criterias_array = st.sidebar.multiselect("Pick the criterias", potential_
 if len(picked_criterias_array) == 0:
     picked_criterias_array.append("PTS")
 
-st.write(
-    "A doubt on what those criterias mean ? [Check this out](https://www.basketball-reference.com/about/glossary.html)")
+# st.write( "A doubt on what those criterias mean ? [Check this out](https://www.basketball-reference.com/about/glossary.html)")
 
 # st.write("Want to check out the github repo ? [Help yourself](https://github.com/elielevy3/MoneyBallReloaded)")
 st.markdown("____")
@@ -200,7 +207,7 @@ fictive_player_criterias_array.append("MP")
 
 # declaring variables to display the selected criterias
 i = 0
-number_of_item_per_line_fictive_player = 10
+number_of_item_per_line_fictive_player = 5
 col_size_fictive_player = np.ones(number_of_item_per_line_fictive_player)
 
 fictive_player_criterias_array = list(set(fictive_player_criterias_array))
@@ -212,6 +219,18 @@ while i < len(fictive_player_criterias_array):
         with cols_fictive_player[index]:
             fictive_player_criterias_dict[col] = c3.number_input(col, step=1)
     i = i + number_of_item_per_line_fictive_player
+
+# picked_criterias_dict = {}
+# picked_criterias_array = []
+# i = 0
+# number_of_item_per_line_fictive_player = 6
+# col_size_fictive_player = np.ones(number_of_item_per_line_fictive_player)
+# while i < len(fictive_player_criterias_array):
+#     cols_fictive_player = st.columns(col_size_fictive_player)
+#     for index, col in enumerate(fictive_player_criterias_array[i:i + number_of_item_per_line_fictive_player]):
+#         with cols_fictive_player[index]:
+#             picked_criterias_dict[col] = st.checkbox(col)
+#     i = i + number_of_item_per_line_fictive_player
 
 
 c3.markdown("____")

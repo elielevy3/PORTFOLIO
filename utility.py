@@ -8,7 +8,7 @@ import numpy as np
 @st.experimental_singleton
 def load_data():
     data = pd.read_csv(
-        "uber-raw-data-sep14.csv.gz",
+        "./csv/uber-raw-data-sep14.csv.gz",
         nrows=80000,
         names=[
             "date/time",

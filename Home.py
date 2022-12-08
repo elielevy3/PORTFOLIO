@@ -9,13 +9,11 @@ st.markdown(
     As a Data Engineer, please find in this portfolio some projects I have worked on.
     **👈 Select a demo from the sidebar** to see some examples
     ### Wondering what's on the menu ? 
-    - AirBNB Exploration 🏠 : Discover the available homes in the London Area
+    - AirBnb Exploration 🏠 : Discover the available homes in the London Area
     - Uber Exploration 🚕 : Visualize Uber pickupds in NYC
     - Cloud Certification Quizz 📚 : Get some training to ace your GCP Certification
-    - MoneyBall Reloaded 🏀 : Analyse NBA Data to find the perfect player
+    - MoneyBall Reloaded 🏀 : Analyze NBA Data to find the perfect player
     ### Want to check the code ? 
-    - [Help yourself](https://github.com/elielevy3)
-    ### Want to see my LinkedIn Profile ? 
-    - [Here it is](https://www.linkedin.com/in/elie-levy-b48ab5145) 
+    - [Help yourself](https://github.com/elielevy3/PORTFOLIO)
 """
 )

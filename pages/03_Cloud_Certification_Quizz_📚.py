@@ -2,13 +2,21 @@ import streamlit as st
 import pandas as pd
 from random import sample
 
-st.set_page_config(page_title="WEWYSE GCP TRAINING", page_icon="📚")
+st.set_page_config(page_title="WEWYSE GCP TRAINING", page_icon="📚", layout="wide")
 
 @st.experimental_memo
 def get_sample_question(data, nb_of_questions):
     return sample(range(1, len(data)), nb_of_questions)
 
 st.markdown("# 📚 WELCOME TO WEWYSE GCP ACE TRAINING !")
+
+st.write(' ')
+with st.expander("📚 Information about the Web App", expanded = True):
+    st.write("""
+            - Train yourself for the GCP Associate Cloud Engineer Certification
+            - Build with Python, Streamlit and Pandas
+            - Feel free to check the repo [here](https://github.com/elielevy3/GCP_TRAINING)
+            """)
 
 # get raw data
 data = pd.read_csv("./csv/Evaluation_test.csv", sep=";")

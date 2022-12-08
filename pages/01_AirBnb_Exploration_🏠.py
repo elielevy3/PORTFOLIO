@@ -5,7 +5,7 @@ import pandas as pd
 def get_data(sample_size): 
 
     # get raw data from csv
-    data = pd.read_csv("listings.csv")
+    data = pd.read_csv("./csv/listings.csv")
 
     # remove index as we do not need them in the workshop
     data.reset_index(inplace=True)
@@ -21,6 +21,14 @@ st.markdown("# Welcome to London AirBnb Exploration 🏠")
 
 # get data
 data = get_data(3000)
+
+st.write(' ')
+with st.expander("🏠 Information about the Web App", expanded = True):
+    st.write("""
+            - This app has been used as a part of a 2H training that I have organized on the 30/11/2022
+            - Build with Python, Streamlit and Pandas
+            - Feel free to check the repo [here](https://github.com/elielevy3/STREAMLIT_DEPLOYMENT_SHOWCASE)
+            """)
 
 col_1, col_2, col_3, col4 = st.columns(4)
 
@@ -39,7 +47,7 @@ with col_2:
         selected_hoods = data["neighbourhood"].unique()
 
 with col_3:
-    st.header("Max price")
+    st.header("Max and min price")
     min_price, max_price = st.slider("Pick your min and max price", value=(0, 1000))
 
 with col4: 

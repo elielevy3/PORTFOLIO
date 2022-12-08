@@ -6,6 +6,14 @@ from datetime import time
 st.set_page_config(page_title="Uber Pickups Exploration", layout="wide", page_icon="🚕",     menu_items={'Get Help': 'https://github.com/elielevy3/EXERCISE_UBER',})
 st.title("Welcome to NYC Uber Pickups Exploration 🚕!" )
 
+st.write(' ')
+with st.expander("🚕 Information about the Web App", expanded = True):
+    st.write("""
+            - Discover Uber Pickups distribution in NYC
+            - Build with Python, Streamlit, Pandas, Numpy and Pydeck
+            - Feel free to check the repo [here](https://github.com/elielevy3/EXERCISE_UBER)
+            """)
+
 # get data
 raw_data = load_data()
 
