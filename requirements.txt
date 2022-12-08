@@ -1,0 +1,4 @@
+unidecode
+matplotlib
+nbformat
+scipy
